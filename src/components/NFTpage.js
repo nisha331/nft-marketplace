@@ -75,7 +75,13 @@ async function buyNFT(tokenId) {
         <div style={{"min-height":"100vh"}}>
             <Navbar></Navbar>
             <div className="flex ml-20  pt-20 pl-20 mt-10 ">
-                <img src={data.image} alt="" className="w-1/4" />
+                {data.image && (
+          <embed
+            src={data.image}
+            alt=""
+            className="w-1/3 h-96 rounded-lg object-cover"
+          />
+        )}
                 <div className="text-xl     bg-gray-800 ml-60 text-justify  space-y-8 text-white shadow-2xl rounded-lg border-2 border-black p-8">
                     <div>
                         Name: {data.name}
